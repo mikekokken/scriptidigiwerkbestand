@@ -59,25 +59,28 @@
 
 					<h2 id="introduction1">Introduction</h2>
 
-					<h3 id="graphicdesignhasalwaysevolvedthroughouthistoryasanartisticandcommunicativedisciplinewhichhasoriginatedthroughthepracticeanddevelopmentofvisualforms.todaythegraphicdesignpracticehasbecomeincreasinglydispersedinit’sdefinitionandinit’srole.whereweoftenquestionthevaluecraftandfunctionofdesignasatoolbywhichweshapeourenvironmentslanguagesandrealitieswith.">Graphic design has always evolved throughout history as an artistic and communicative discipline which has originated through the practice and development of visual forms. Today the graphic design practice has become increasingly dispersed in it’s definition, and in it’s role. Where we often question the value, craft, and function of design as a tool by which we shape our environments, languages, and realities with.</h3>
+					<h3 id="graphicdesignhasalwaysevolvedthroughouthistoryasanartisticandcommunicativedisciplinewhichhasoriginatedthroughthepracticeanddevelopmentofvisualforms.todaythegraphicdesignpracticehasbecomeincreasinglydispersedinit’sdefinitionandinit’srole.whereweoftenquestionthevaluecraftandfunctionofdesignasatoolbywhichweshapeourenvironmentslanguagesandrealitieswith.">Graphic design has always evolved throughout history as an artistic and communicative discipline which has originated through the practice and development of visual forms. Today the graphic design practice has become increasingly dispersed in it’s definition, and in it’s role. Where we often question the value, craft, and function <span class="anker"></span> of design as a tool by which we shape our environments, languages, and realities with.</h3>
 
 					<h2 id="chapter01:socialimplications">Chapter 01: Social Implications</h2>
 
-					<p>Graphic design has always evolved throughout history as an artistic and communicative discipline which has originated through the practice and development of visual forms. Today the graphic design practice has become increasingly dispersed in it’s definition, and in it’s role. Where we often question the value, craft, and function of design as a tool by which we shape our environments, languages, and realities with.</p>
-
+					<p>Graphic design has always evolved throughout history as an artistic and communicative discipline which has originated through the practice and development of visual forms. Today the graphic design practice has become increasingly dispersed in it’s definition, and in it’s role. Where we often question the value, craft, and function of design as a tool by which we shape our environments, languages, and realities with.</p>					
+					
 					<p>Though graphic design also fosters social implications and responsibilities<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a>; the contemporary practice has recently been strongly motivated and driven by a research based approach, rather than employing the value of it’s own craft. Resulting from the technological developments which have largely democratized the tools of design, while also offering a broad scope of platforms for design work to exist in. For a climate where the designer has assumed himself as <em>author, artist, researcher, curator, and producer</em>; in the interest of superseding the marginalization of the craft, and it’s value.<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a></p>
 
 					<p>The thesis topic and research question are strongly motivated by investigating the value of form by posing questions towards the developments of form and aesthetics in <em>graphic design today</em><a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a>; by looking at the ways in which the practice continuous to revise itself, re-invent itself, and redefine it’s trajectory in a multidisciplinary climate of design. </p>
-
-					<p>By posing questions towards the developments of form and aesthetics in graphic design today<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote">[4]</a>; by looking at the ways in which the practice continuous to revise itself, re-invent itself, and redefine it’s trajectory in a multidisciplinary climate of design. </p>
+					
+					
+					
+					<p>By posing questions towards the developments of <span class="anker"></span>form and aesthetics in graphic design today<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote">[4]</a>; by looking at the ways in which the practice continuous to revise itself, re-invent itself, and redefine it’s trajectory in a multidisciplinary climate of design. </p>
 
 					<h2 id="chapter02:artisticandcommunicativedisciplines">Chapter 02: Artistic and Communicative Disciplines</h2>
 
 					<p>Though graphic design also fosters social implications and responsibilities<a href="#fn:5" id="fnref:5" title="see footnote" class="footnote">[5]</a>; the contemporary practice has recently been strongly motivated and driven by a research based approach, rather than employing the value of it’s own craft. Resulting from the technological developments which have largely democratized the tools of design, while also offering a broad scope of platforms for design work to exist in. For a climate where the designer has assumed himself as <em>author, artist, researcher, curator, and producer</em>; in the interest of superseding the marginalization of the craft, and it’s value.<a href="#fn:6" id="fnref:6" title="see footnote" class="footnote">[6]</a></p>
-
+				
+					
 					<p>The thesis topic and research question are strongly motivated by investigating the value of form by posing questions towards the developments of form and aesthetics in <em>graphic design today</em>; by looking at the ways in which the practice continuous to revise itself, re-invent itself, and redefine it’s trajectory in a multidisciplinary climate of design. </p>
 
-					<p>By posing questions towards the developments of form and aesthetics in graphic design today<a href="#fn:7" id="fnref:7" title="see footnote" class="footnote">[7]</a>; by looking at the ways in which the practice continuous to revise itself, re-invent itself, and redefine it’s trajectory in a multidisciplinary climate of design. </p>
+					<p><span class="anker"></span>By posing questions towards the developments of form and aesthetics in graphic design today<a href="#fn:7" id="fnref:7" title="see footnote" class="footnote">[7]</a>; by looking at the ways in which the practice continuous to revise itself, re-invent itself, and redefine it’s trajectory in a multidisciplinary climate of design. </p>
 
 					<div class="footnotes courier" id="footnotes">
 						<hr>
@@ -190,6 +193,35 @@
 		  $('.essay_nav_inner').toggleClass('scrolling', $(window).scrollTop() > $('.essay_nav').offset().top);
 		});
 
+		function calculateOffset() 
+		{
+		    var ankers = []; // array to store the width of each element
+		    var frames = [];
+		    var nummer = 0;  // framenummer
+
+		    $(".anker").each(function () 
+		    {
+		        ankers.push( $(this).offset() ); // get the width + margin-right
+		    });
+
+
+		    $(".draagbaar").each(function () {
+		    	frames.push( $(this).css("left") );
+		    });
+
+		    for (var i = 0; i < ankers.length; i++) 
+		    {
+		        nummer = i + 1;
+		       
+		        console.log( ankers[i].top + ", " + ankers[i].left );
+		        console.log( frames[i] );
+
+		       $("#frame" + nummer).css({
+		       		"top": ankers[i].top + "px",
+		       		"left": ankers[i].left + "px"	
+		       });
+		    }
+		}
 	</script>
 </body>
 </html>

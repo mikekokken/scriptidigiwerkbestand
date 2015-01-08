@@ -117,8 +117,6 @@ hr
 	padding: 7px 10px;
 	border:2px solid #000;
 	font-family: 'Courier New', monospace;
-
-
 }
 .button:hover 
 {
@@ -147,7 +145,6 @@ a:active
 {
 	text-decoration: none;
 } 
-
 .draagbaar 
 {
 	cursor: all-scroll;
@@ -162,4 +159,23 @@ a:active
 #images
 {
 	display: none;
+}
+span.anker
+{
+	width: 10px;
+	height: 10px;
+	z-index: 1000;
+	position: absolute;
+}
+#frame1
+{
+	left: 0;
+}
+#frame2
+{
+	left: 0;
+}
+#frame3
+{
+	left: -200;
 }
