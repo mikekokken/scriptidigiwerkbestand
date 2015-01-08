@@ -11,7 +11,7 @@
 		<link type="text.css" rel="stylesheet" href="responsive.css">
 </head>
 
-<body onload="minWidth(); randomFrames();">
+<body>
 	<div id="wrapper">	
 
 		<section class="intro_scrollbox">
@@ -31,7 +31,7 @@
 						<p>Het constant stellen van vragen lijkt noodzakelijk voor het (voort) bestaan van kunst en grafisch ontwerp. Hierbij kan de vraag twee richtingen inslaan: constructie (het steeds verder bouwen op een fundering) en destructie (afbreken tot er niets meer is). Hoewel de mens veelal constructief denkt en handelt neig ik sterk naar de laatstgenoemde. Maar niet zonder problemen. Want eenmaal begonnen met steeds verder afbreken kan ik nog lastig een halt toeroepen en loop daardoor vaak vast in het proces. Omdat ik ervan overtuigd ben dat destructie een belangrijke rol kan vervullen, wil ik haar graag nader bekijken. Dit om meer grip te krijgen waarom de noodzakelijke vragen stellen bij mij fout gaan maar ook op hoe we het in kunnen zitten in een tijd waarin alles veranderlijk en onzeker lijkt. Eerst zal het kader behandeld worden om te begrijpen hoe onze kijk op de wereld wordt gevormd en werkt, de basis waarom destructie toeslaat. Vervolgens ga ik de verschillende stadia van destructie langs: de *Slag*, *Explosie* en *Implosie*, de *Val*, de *Stofwolk* en de *Ruine*. Ik kom tot het inzicht hoe de o-zo aannemlijke constructie vals is en juist destructie noodzakelijk is om de juiste vragen te stellen en toekomstericht te zijn.</p>
 					</div>
 					
-					<a href="javascript:void(0);" class="button" onclick="switchEssay(1);">Lees!</a>
+					<a href="javascript:void(0);" class="button" onclick="loadEssay();">Lees!</a>
 				</article>
 			</div>
 		</section>
@@ -39,11 +39,11 @@
 		<!-- COMPLETE ESSAYS -->
 		<section  class="essay_wrapper" id="essay_wrapper">
 			<!-- #1 -->
-			<article class="the_essay" id="the_essay1">
+			<article class="the_essay" id="the_essay">
 				<div class="essay_nav slide-menu courier">
 					<div class="essay_nav_inner">
 						<ul>
-			                <li><a href="#the_essay1">The Value of Form</a></li>
+			                <li><a href="#the_essay">The Value of Form</a></li>
 			                <li><a href="#introduction">Introduction</a></li>
 			                <li><a href="#chapter01:socialimplications">Chapter 01: Social Implications</a></li>
 			                <li><a href="#chapter02:artisticandcommunicativedisciplines">Chapter 02: Artistic and Communicative Disciplines</a></li>
@@ -120,7 +120,7 @@
 			</article>
   	
 
-	  		<div id="images">
+	  		<div id="frame_wrapper">
 	  			<div class="ui-widget-content draagbaar" id="frame1">
 					<h1>lekker dan 1</h1>
 
@@ -194,37 +194,8 @@
 		  $('.essay_nav_inner').toggleClass('scrolling', $(window).scrollTop() > $('.essay_nav').offset().top);
 		});
 
-		function snapNaarAnker() 
-		{
-		    var ankers = []; // array om de positie van elk anker in op te slaan
-		    var frames = []; // array om de oorspronkelijk positie van elk frame in op te slaan
-		    var nummer = 0;  // variable (om elk frame te kunnen selecteren in een loop)
-
-		    $(".anker").each(function () 
-		    {
-		        ankers.push( $(this).offset() );
-		    });
 
 
-		    $(".draagbaar").each(function () 
-		    {
-		    	frames.push( $(this).offset() );
-		    });
-
-		    for (var i = 0; i < ankers.length; i++) 
-		    {
-		        nummer = i + 1;
-		       
-		        // console.log( ankers[i].top + ", " + ankers[i].left );
-		        // console.log( frames[i].left );
-
-		       $("#frame" + nummer).css(
-		       {
-		       		"top": ankers[i].top + frames[i].top + "px",
-		       		"left": ankers[i].left + frames[i].left + "px"	
-		       });
-		    }
-		}
 	</script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+var firstTry = true;
+
 function getRandomRange(min, max) 
 {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -9,42 +11,21 @@ Array.max = function( array )
 }
 
 /*
-    make sure the intro texts stay horizontal
+    scroll function to show essay and launch various other functions
 */
-function minWidth() 
+function loadEssay() 
 {
-    var a = []; // array to store the width of each element
-    var b = 0;    
-    var c = 50; // the margin-right!
-
-    $(".intro_essay").each(function () 
+    $('#the_essay').fadeIn("slow", function() 
     {
-        a.push($(this).width() + c); // get the width + margin-right
-    });
-
-    for (var i = 0; i < a.length; i++) 
-    {
-        b = b + a[i];
-    }
-
-    $(".intro_wrapper").css('min-width', b + 1); // 1 pixel fail safe
-
-    console.log(a);
-    console.log(b);
-}
-
-/*
-    essay switching function
-*/
-function switchEssay(a) 
-{
-    // $(".the_essay:visible").fadeOut("slow");
-
-
-    $('#the_essay' + a).fadeIn("slow", function() {
-        $('#images').fadeIn("slow");
-        $.scrollTo(  $('#the_essay' + a + ''), 1000);
-        snapNaarAnker();
+        $('#frame_wrapper').fadeIn("slow");
+        $.scrollTo( $('#the_essay'), 1000);
+        
+        // deze if statement zorgt ervoor dat als je nog een keer op lees klikt die frames niet nog een keer gepositioneerd worden.
+        if (firstTry)
+        {
+            snapToAnker();
+            firstTry = false;
+        }
     }); 
 }
 
@@ -52,31 +33,6 @@ function switchEssay(a)
     draggable frame functions
 */
 
-var h = window.innerHeight;
-var w = window.innerWidth;
-var output = "";
-
-function randomFrames()
-{   
-    var a = []; // array to store the width of each element
-    var maxW = 512;
-    var maxH = 512;
-
-    $(".draagbaar").each(function () 
-    {
-        a.push($(this)); 
-    });
-
-    for (var i = 1; i < a.length + 1; i++)
-    {   
-        console.log(i);
-        $("#frame" + i).css({
-            // "top": getRandomRange(60, h - 400) + "px", 
-            // "left": getRandomRange(0, w - 400) + "px",
-            "background-color": "rgb(" + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + ")"
-        });
-    }
-}
 function selectFrame(element, stack)
 {
     var a = [];
@@ -85,8 +41,8 @@ function selectFrame(element, stack)
     {
         a.push($(this).css("z-index"))
     });
-
-    console.log(a[0], a[1], a[2]);
+    
+    // console.log(a[0], a[1], a[2]);
 
     var maxZ = Array.max(a);
     console.log(maxZ);
@@ -99,6 +55,42 @@ $(function()
     $(".draagbaar").draggable({ stack: ".draagbaar" });
 });
 
+
+/*
+    snap elke frame aan een anker om de positie te bepalen
+*/
+function snapToAnker() 
+{
+    var ankers = []; // array om de positie van elk anker in op te slaan
+    var frames = []; // array om de oorspronkelijk positie van elk frame in op te slaan
+    var nummer = 0;  // variable (om elk frame te kunnen selecteren in een loop)
+
+    $(".anker").each(function () 
+    {
+        ankers.push( $(this).offset() );
+    });
+
+
+    $(".draagbaar").each(function () 
+    {
+        frames.push( $(this).offset() );
+    });
+
+    for (var i = 0; i < ankers.length; i++) 
+    {
+        nummer = i + 1;
+       
+        console.log( ankers[i].top + ", " + ankers[i].left );
+        console.log( frames[i].top + ", " + frames[i].left );
+
+       $("#frame" + nummer).css(
+       {
+            "top": ankers[i].top + frames[i].top + "px",
+            "left": ankers[i].left + frames[i].left + "px",
+            "background-color": "rgb(" + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + "," + getRandomRange(0, 255) + ")"  
+       });
+    }
+}
 /*
     smoooth scroll function
 */
