@@ -70,15 +70,9 @@ hr
 }
 .intro_essay 
 {
-<<<<<<< HEAD
-	height: 600px;
-	width: 500px;
-=======
 	height: 700px;
 	width: 550px;
->>>>>>> draagbare-frames
-	margin-right:auto;
-	margin-left:auto;
+	margin:0 auto;
 	float: center;
 }
 
@@ -111,11 +105,9 @@ hr
 <<<<<<< HEAD
 	margin:0 auto;
 	width: 520px;
-=======
 	margin: 0 auto;
 	width: 550px;
 	margin-bottom: 200px;
->>>>>>> draagbare-frames
 }
 .courier, .footnote  
 {

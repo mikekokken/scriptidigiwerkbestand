@@ -13,12 +13,7 @@
 
 <body onload="minWidth(); randomFrames();">
 	<div id="wrapper">	
-<<<<<<< HEAD
 
-		<!-- TITLES BAR  &  INTRODUCTIONS TO THE ESSAYS -->
-
-=======
->>>>>>> draagbare-frames
 		<section class="intro_scrollbox">
 			<div class="intro_wrapper">	
 				<!-- #1 -->
@@ -26,16 +21,6 @@
 
 					<div class="intro_title">
 						<h1 id="thisistitle">This is Title</h1>
-<<<<<<< HEAD
-					</div>
-
-					<div class="intro_text">
-						
-
-						<p>Het constant stellen van vragen lijkt noodzakelijk voor het (voort) bestaan van kunst en grafisch ontwerp. Hierbij kan de vraag twee richtingen inslaan: constructie (het steeds verder bouwen op een fundering) en destructie (afbreken tot er niets meer is). Hoewel de mens veelal constructief denkt en handelt, neig ik sterk naar de laatstgenoemde. Maar niet zonder problemen. Want eenmaal begonnen met steeds verder afbreken kan ik nog lastig een halt toeroepen en loop daardoor vaak vast in het proces. Omdat ik ervan overtuigd ben dat destructie een belangrijke rol kan vervullen, wil ik haar graag nader bekijken. Dit om meer grip te krijgen waarom de noodzakelijke vragen stellen bij mij fout gaan maar ook op hoe we het in kunnen zitten in een tijd waarin alles veranderlijk en onzeker lijkt. Eerst zal het kader behandeld worden om te begrijpen hoe onze kijk op de wereld wordt gevormd en werkt, de basis waarom destructie toeslaat. Vervolgens ga ik de verschillende stadia van destructie langs: de *Slag*, *Explosie* en *Implosie*, de *Val*, de *Stofwolk* en de *Ruine*. Ik kom tot het inzicht hoe de o-zo aannemlijke constructie vals is en juist destructie noodzakelijk is om de juiste vragen te stellen en toekomstericht te zijn.</p>
-
-					
-=======
 
 						<h2> vraag? </h2>
 
@@ -44,7 +29,6 @@
 
 					<div class="intro_text">		
 						<p>Het constant stellen van vragen lijkt noodzakelijk voor het (voort) bestaan van kunst en grafisch ontwerp. Hierbij kan de vraag twee richtingen inslaan: constructie (het steeds verder bouwen op een fundering) en destructie (afbreken tot er niets meer is). Hoewel de mens veelal constructief denkt en handelt neig ik sterk naar de laatstgenoemde. Maar niet zonder problemen. Want eenmaal begonnen met steeds verder afbreken kan ik nog lastig een halt toeroepen en loop daardoor vaak vast in het proces. Omdat ik ervan overtuigd ben dat destructie een belangrijke rol kan vervullen, wil ik haar graag nader bekijken. Dit om meer grip te krijgen waarom de noodzakelijke vragen stellen bij mij fout gaan maar ook op hoe we het in kunnen zitten in een tijd waarin alles veranderlijk en onzeker lijkt. Eerst zal het kader behandeld worden om te begrijpen hoe onze kijk op de wereld wordt gevormd en werkt, de basis waarom destructie toeslaat. Vervolgens ga ik de verschillende stadia van destructie langs: de *Slag*, *Explosie* en *Implosie*, de *Val*, de *Stofwolk* en de *Ruine*. Ik kom tot het inzicht hoe de o-zo aannemlijke constructie vals is en juist destructie noodzakelijk is om de juiste vragen te stellen en toekomstericht te zijn.</p>
->>>>>>> draagbare-frames
 					</div>
 					
 					<a href="javascript:void(0);" class="button" onclick="switchEssay(1);">Lees!</a>
@@ -72,15 +56,12 @@
 
 					<h1 id="thevalueofform">The Value of Form #1</h1>
 
-<<<<<<< HEAD
-=======
 					<h1 id="byalyaraynetchi">by Alyar Aynetchi</h1>
 
 					<h2 id="introduction1">Introduction</h2>
 
 					<h3 id="graphicdesignhasalwaysevolvedthroughouthistoryasanartisticandcommunicativedisciplinewhichhasoriginatedthroughthepracticeanddevelopmentofvisualforms.todaythegraphicdesignpracticehasbecomeincreasinglydispersedinit’sdefinitionandinit’srole.whereweoftenquestionthevaluecraftandfunctionofdesignasatoolbywhichweshapeourenvironmentslanguagesandrealitieswith.">Graphic design has always evolved throughout history as an artistic and communicative discipline which has originated through the practice and development of visual forms. Today the graphic design practice has become increasingly dispersed in it’s definition, and in it’s role. Where we often question the value, craft, and function <span class="anker"></span> of design as a tool by which we shape our environments, languages, and realities with.</h3>
 
->>>>>>> draagbare-frames
 					<h2 id="chapter01:socialimplications">Chapter 01: Social Implications</h2>
 
 					<p>Graphic design has always evolved throughout history as an artistic and communicative discipline which has originated through the practice and development of visual forms. Today the graphic design practice has become increasingly dispersed in it’s definition, and in it’s role. Where we often question the value, craft, and function of design as a tool by which we shape our environments, languages, and realities with.</p>					
@@ -215,17 +196,18 @@
 
 		function snapNaarAnker() 
 		{
-		    var ankers = []; // array to store the width of each element
-		    var frames = [];
-		    var nummer = 0;  // framenummer
+		    var ankers = []; // array om de positie van elk anker in op te slaan
+		    var frames = []; // array om de oorspronkelijk positie van elk frame in op te slaan
+		    var nummer = 0;  // variable (om elk frame te kunnen selecteren in een loop)
 
 		    $(".anker").each(function () 
 		    {
-		        ankers.push( $(this).offset() ); // get the width + margin-right
+		        ankers.push( $(this).offset() );
 		    });
 
 
-		    $(".draagbaar").each(function () {
+		    $(".draagbaar").each(function () 
+		    {
 		    	frames.push( $(this).offset() );
 		    });
 
@@ -236,7 +218,8 @@
 		        // console.log( ankers[i].top + ", " + ankers[i].left );
 		        // console.log( frames[i].left );
 
-		       $("#frame" + nummer).css({
+		       $("#frame" + nummer).css(
+		       {
 		       		"top": ankers[i].top + frames[i].top + "px",
 		       		"left": ankers[i].left + frames[i].left + "px"	
 		       });
