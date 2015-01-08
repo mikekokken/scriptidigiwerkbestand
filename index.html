@@ -193,7 +193,7 @@
 		  $('.essay_nav_inner').toggleClass('scrolling', $(window).scrollTop() > $('.essay_nav').offset().top);
 		});
 
-		function calculateOffset() 
+		function snapNaarAnker() 
 		{
 		    var ankers = []; // array to store the width of each element
 		    var frames = [];
@@ -206,19 +206,19 @@
 
 
 		    $(".draagbaar").each(function () {
-		    	frames.push( $(this).css("left") );
+		    	frames.push( $(this).offset() );
 		    });
 
 		    for (var i = 0; i < ankers.length; i++) 
 		    {
 		        nummer = i + 1;
 		       
-		        console.log( ankers[i].top + ", " + ankers[i].left );
-		        console.log( frames[i] );
+		        // console.log( ankers[i].top + ", " + ankers[i].left );
+		        // console.log( frames[i].left );
 
 		       $("#frame" + nummer).css({
-		       		"top": ankers[i].top + "px",
-		       		"left": ankers[i].left + "px"	
+		       		"top": ankers[i].top + frames[i].top + "px",
+		       		"left": ankers[i].left + frames[i].left + "px"	
 		       });
 		    }
 		}

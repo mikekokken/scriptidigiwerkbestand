@@ -44,7 +44,7 @@ function switchEssay(a)
     $('#the_essay' + a).fadeIn("slow", function() {
         $('#images').fadeIn("slow");
         $.scrollTo(  $('#the_essay' + a + ''), 1000);
-        calculateOffset();
+        snapNaarAnker();
     }); 
 }
 
