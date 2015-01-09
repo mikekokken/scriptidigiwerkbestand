@@ -1,9 +1,9 @@
-html, body 
+html, body
 {
 	margin: 0;
 	padding: 0;
 	font-family: 'Georgia', serif;
-	
+
 }
 
 h1
@@ -29,16 +29,16 @@ p
 }
 /* standard block element styles */
 
-#wrapper 
+#wrapper
 {
 	/* padding: 50px 40px 20px 40px; */
 }
-header 
+header
 {
-	padding: 5vh 40px; 
+	padding: 5vh 40px;
 	height: 10vh;
 }
-footer 
+footer
 {
 	position: fixed;
 	width: 100%;
@@ -53,7 +53,7 @@ footer
 	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0 );  MICROSOFT... *sigh*  */
 	display:none;
 }
-hr 
+hr
 {
     border: 0;
   	border-top: 2px solid #000;
@@ -68,7 +68,7 @@ hr
 {
 	height: 100vh;
 }
-.intro_essay 
+.intro_essay
 {
 	height: 700px;
 	width: 550px;
@@ -78,8 +78,8 @@ hr
 
 /* COMPLETE ESSAY STYLES */
 
-.essay_wrapper 
-{	
+.essay_wrapper
+{
 	clear: both;
 }
 .essay_nav, .essay_nav_inner
@@ -87,11 +87,11 @@ hr
 	width: 250px;
 	float: left;
 }
-.essay_nav ul 
+.essay_nav ul
 {
 	padding: 10px 0 0;
 }
-.essay_nav li 
+.essay_nav li
 {
 	list-style-type: none;
 	margin-bottom: 10px;
@@ -100,7 +100,7 @@ hr
     position: fixed;
     top: 0;
 }
-.essay_complete 
+.essay_complete
 {
 	margin:0 auto;
 	width: 520px;
@@ -108,20 +108,20 @@ hr
 	width: 550px;
 	margin-bottom: 200px;
 }
-.courier, .footnote  
+.courier, .footnote
 {
 	font-family: 'Courier New', monospace;
 	font-size:10pt;
 }
 
-.footnotes p 
+.footnotes p
 {
 	font-size:10pt;
 }
 
 /* ESSAY SWITCH STYLES */
 
-.the_essay 
+.the_essay
 {
 	margin-top: 25px;
 	padding-top: 25px;
@@ -129,14 +129,14 @@ hr
 }
 
 /* andere stijlen */
-.button 
-{	
+.button
+{
 	color: #000;
 	padding: 7px 10px;
 	border:2px solid #000;
 	font-family: 'Courier New', monospace;
 }
-.button:hover 
+.button:hover
 {
 	background: #000;
 	color:#fff;
@@ -144,26 +144,26 @@ hr
 }
 
 /* links stijlen */
-a 
+a
 {
 	color: black;
 	text-decoration: none;
 }
-a:hover 
+a:hover
 {
 	color: red;
 	text-decoration: underline;
 
 }
-a:visited 
+a:visited
 {
 	text-decoration: none;
 }
-a:active 
+a:active
 {
 	text-decoration: none;
-} 
-.draagbaar 
+}
+.draagbaar
 {
 	cursor: all-scroll;
 	background-color: red;
