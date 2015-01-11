@@ -1,51 +1,159 @@
 /* responsive stuff */
 
+
+
+/*computer*/
 @media only screen and (max-width:1280px) {
    .essay_nav, .essay_nav_inner
 	{
 		width: 200px;
 		float: left;
-		font-size: 8pt;
+		
 	}
 }
+	
 
+
+
+
+
+
+
+
+
+
+
+
+/*tablet*/	
 @media only screen and (max-width:960px) {
 
-	.intro_scrollbox
-	{
-		display:none;
-	}
+	
+		
+
 	.essay_nav
 	{
 		display: none;
 	}
+
+
+	.intro_essay
+{
+
+	height: 400px;
+	width: 500px;
+	
 }
 
+.essay_complete
+{
+	
+	margin: 0 auto;
+	width: 500px;
+	margin-bottom: 200px;
+}
+
+
+
+		h1
+		{
+			margin: 1em 10px;
+			font-size: 24px;
+			font-style: bold;
+			line-height: 32px;
+		}
+		h2
+		{
+			font-size:20;
+			font-style:bold;
+			margin: 2em 10px;
+		}
+
+
+		p
+		{
+			margin: 1em 10px;
+			font-size: 14px;
+			line-height: 22px;
+			/*text-align: justify;
+		    text-justify: inter-word;*/
+
+		}
+
+		blockquote
+		{
+			
+			font-size: 18pt;
+			margin:   2em -10px;
+			line-height: 38px;
+		}
+
+
+
+
+
+}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*smartphone*/
 @media only screen and (max-width:540px) {
-   
-   .intro_scrollbox
+	   
+	  	h1 
+		{
+			font-size: 14pt;
+			margin:10px;
+		}
+		h2, h3
+		{
+			font-size: 12pt;
+			margin:10px;	}
+		p
+		{
+			font-size: 10pt;
+			line-height: 20px;
+			margin:10px;
+		}
+
+		blockquote
+		{
+		
+		font-size: 14pt;
+		margin:   2em 10px;
+		line-height: 24px;
+		}
+
+	.intro_essay
 	{
-		display:none;
+
+	height: 10px;
+	width: 400px;
 	}
-    .essay_complete
-	{ 
-		width:400px;
+	.intro_wrapper 
+	{
+		height:500px;
 	}
+.essay_complete
+{
+	
+	margin: 0 auto;
+	width: 400px;
+	margin-bottom: 200px;
+}
+ 
 	.essay_nav
 	{
 		display: none;
 	}
 
-	h1 
-	{
-		font-size: 14pt;
-	}
-	h2, h3
-	{
-		font-size: 12pt;
-	}
-	p
-	{
-		font-size: 10pt;
-	}
 }
