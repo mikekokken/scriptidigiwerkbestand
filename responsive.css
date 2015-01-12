@@ -32,7 +32,7 @@
 
 	.essay_nav
 	{
-		display: none;
+		/*display: none;*/
 	}
 
 
@@ -44,7 +44,7 @@
 	
 }
 
-.essay_complete
+	.essay_complete
 {
 	
 	margin: 0 auto;
@@ -52,6 +52,19 @@
 	margin-bottom: 200px;
 }
 
+	.essay_nav_inner
+{
+	font-size: 8pt;
+
+}
+
+	.footnotes p
+{
+	font-family: 'Univers', sans-serif;
+	font-size:8pt;
+	line-height: 16px;
+
+}
 
 
 		h1
