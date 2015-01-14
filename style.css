@@ -35,7 +35,7 @@ p
 
 blockquote
 {
-	
+
 	font-size: 18pt;
 	margin:   2em -10px;
 	line-height: 38px;
@@ -121,14 +121,14 @@ hr
 	list-style-type: none;
 	margin-bottom: 10px;
 }
-.scrolling 
+.scrolling
 { /* keep the navigatation at the top */
     position: fixed;
     top: 0;
 }
 .essay_complete
 {
-	
+
 	margin: 0 auto;
 	width: 650px;
 	margin-bottom: 200px;
@@ -203,7 +203,6 @@ a:active
 .draagbaar
 {
 	cursor: all-scroll;
-	background-color: red;
 	/*width: 300px;
 	height: 300px;*/
 	overflow-y: none;
@@ -221,6 +220,7 @@ span.anker
 	width: 10px;
 	height: 10px;
 	position: absolute;
+	background-color: #00FF00;
 }
 
 /*
@@ -538,7 +538,7 @@ span.anker
 	left: 0px;
 }
 
-#frame37 
+#frame37
 {
 	width:300px;
 	height:193px;
@@ -554,7 +554,7 @@ span.anker
 	left: 0px;
 }
 
-#frame39 
+#frame39
 {
 	width:300px;
 	height:171px;
@@ -673,5 +673,3 @@ span.anker
 	top: 0px;
 	left: 0px;
 }
-
-
