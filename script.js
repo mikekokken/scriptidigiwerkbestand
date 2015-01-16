@@ -97,6 +97,8 @@ function snapToAnker()
     {
         alert("Er zijn niet een gelijk aantal ankers en frames..")
     }
+    
+    console.log("ankers: " +ankers.length+ ", frames: " +frames.length)
 
 }
 /*

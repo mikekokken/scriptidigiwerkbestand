@@ -226,7 +226,7 @@ span.anker
 /*
 	note; let op elke frame moet een TOP en een LEFT waarde hebben. OOK als die 0 is!
 */
-#frame01
+#frame1
 {
 	width:298px;
 	height:300;
@@ -242,7 +242,7 @@ span.anker
 	left: 0px;
 }
 
-#frame02
+#frame2
 {
 	width:300px;
 	height:180;
@@ -250,7 +250,7 @@ span.anker
 	left: 0px;
 }
 
-#frame02.2
+#frame2.2
 {
 	width:300px;
 	height:225px;
@@ -258,7 +258,7 @@ span.anker
 	left: 0px;
 }
 
-#frame03
+#frame3
 {
 	width:300px;
 	height:204px;
@@ -266,7 +266,7 @@ span.anker
 	left: 0px;
 }
 
-#frame04
+#frame4
 {
 	width:300px;
 	height:300;
@@ -274,7 +274,7 @@ span.anker
 	left: 0px;
 }
 
-#frame05
+#frame5
 {
 	width:300px;
 	height:300;
@@ -282,7 +282,7 @@ span.anker
 	left: 0px;
 }
 
-#frame06
+#frame6
 {
 	width:300px;
 	height:200px;
@@ -298,7 +298,7 @@ span.anker
 	left: 0px;
 }
 
-#frame07
+#frame7
 {
 	width:300px;
 	height:200px;
@@ -306,7 +306,7 @@ span.anker
 	left: 0px;
 }
 
-#frame08
+#frame8
 {
 	width:300px;
 	height:185px;
@@ -314,7 +314,7 @@ span.anker
 	left: 0px;
 }
 
-#frame09
+#frame9
 {
 	width:300px;
 	height:233px;
@@ -667,6 +667,29 @@ span.anker
 }
 
 #frame53
+{
+	width:300px;
+	height:177px;
+	top: 0px;
+	left: 0px;
+}
+#frame54
+{
+	width:211px;
+	height:238px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame55
+{
+	width:300px;
+	height:201px;
+	top: 0px;
+	left: 0px;
+}
+
+#frame56
 {
 	width:300px;
 	height:177px;
